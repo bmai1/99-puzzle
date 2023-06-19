@@ -130,7 +130,7 @@ const colorBoard = () => {
                 cells[j].style.backgroundColor = "#f55b7f";
             }
             else if (init[i][j] == 0) {
-                cells[j].style.backgroundColor = "pink";
+                cells[j].style.backgroundColor = "pink"; //#fce6ea
             }
             else { cells[j].style.backgroundColor = "#66555f"; }
     
@@ -330,5 +330,9 @@ const check = () => {
         }
     }
     console.log("Winner")
+    let gz = new Audio("media/victory.mp3");
+    gz.currentTime = 0.2;
+    gz.volume = 0.6; 
+    gz.play();
     stopTimer(), off = true;
 }

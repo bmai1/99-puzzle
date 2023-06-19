@@ -9,15 +9,16 @@
     <body>
         <div id="kitty"></div>
         <div id="navbar">
-            <span id="timer">00:00:000</span>
-            <span id="moves">0</span>
-            <button id="newGame" onclick="shuffle()">new game</button>
+            <div>
+                <span id="timer">00:00:000</span>
+                <button id="newGame" onclick="shuffle()">new game</button>
+            </div>
+            <span id="moves">Moves: 0</span>
             <select id="sfx" onchange="sfxSelect(this.value)">
-                <option value="media/s1.mp3">Wood</option>
-                <option value="media/s2.mp3">Marble</option>
-                <option value="media/s3.mp3">Bubble</option>
-            </select>
-              
+                <option value="media/s1.mp3">wood</option>
+                <option value="media/s2.mp3">marble</option>
+                <option value="media/s3.mp3">bubble</option>
+            </select>  
         </div>
         <table id="board">
             <tbody>
@@ -44,13 +45,8 @@
                     <td>14</td>
                     <td>15</td>
                     <td></td>
-                </tr>
-
+		</tr>
             </tbody>
-
-
-
-
         </table>
 	</body>
     <script src="sh.js"></script>

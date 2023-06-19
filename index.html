@@ -4,10 +4,55 @@
         <meta lang="en" charset="utf-8">
         <link rel="stylesheet" href="styles.css">
         <link rel="shortcut icon" href="https://cdn.onlinewebfonts.com/svg/img_99055.png">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
         <title>15 Puzzle</title>
     </head>
     <body>
-        <div id="kitty"></div>
+        <div id="overlay"></div>
+        <!-- <div id="hide_watermark"></div> -->
+        <div id="kitty_overlay">
+            <div id="kitty"></div>
+        </div>
+        <div id="player">
+            <div class="details">
+                <div class="now-playing">now playing...</div>
+                <div class="track-art"></div>
+                <div class="track-name">Shinsetsu (親切)</div>
+                <div class="track-artist">物語シリーズ</div>
+            </div>
+
+
+            <div class="buttons">
+                <div class="prev-track" onclick="prevTrack()">
+                  <i class="fa fa-step-backward fa-2x"></i>
+                </div>
+                <div class="playpause-track" onclick="playpauseTrack()">
+                  <i class="fa fa-play-circle fa-5x"></i>
+                </div>
+                <div class="next-track" onclick="nextTrack()">
+                  <i class="fa fa-step-forward fa-2x"></i>
+                </div>
+              </div>
+           
+              <!-- Define the section for displaying the seek slider-->
+              <div class="slider_container">
+                <div class="current-time">00:00</div>
+                <input type="range" min="1" max="100"
+                  value="0" class="seek_slider" onchange="seekTo()">
+                <div class="total-duration">00:00</div>
+              </div>
+           
+              <!-- Define the section for displaying the volume slider-->
+              <div class="slider_container">
+                <i class="fa fa-volume-down"></i>
+                <input type="range" min="1" max="100"
+                  value="99" class="volume_slider" onchange="setVolume()">
+                <i class="fa fa-volume-up"></i>
+              </div>
+            </div>
+
+
+        </div>
         <div id="navbar">
             <div>
                 <span id="timer">00:00:000</span>
@@ -45,9 +90,15 @@
                     <td>14</td>
                     <td>15</td>
                     <td></td>
-		</tr>
+                </tr>
+
             </tbody>
+
+
+
+
         </table>
 	</body>
+    
     <script src="sh.js"></script>
 </html>

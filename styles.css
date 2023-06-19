@@ -6,18 +6,106 @@ body {
     font-family: Gill Sans;
 }
 
+#overlay {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("media/overlay.png");
+    background-size: cover;
+    opacity: 0.8;
+}
+
+#hide_watermark {
+    display: none;
+
+    position: absolute;
+    transform: rotate(15deg);
+    bottom: -10px;
+    left: -10px;
+    height: 5vh;
+    width: 5vh;
+    opacity: 0.8;
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+}
+
 #kitty {
     position: absolute;
-    height: 100vh;
+    height: 110vh;
     width: 56vw;
-    left: -60px;
-    bottom: -25px;
-    transform: rotate(13deg);
-    
-    background-image: linear-gradient(to top, rgba(255, 192, 203, 0.5), transparent), url("media/hane.png");
+    left: -4vw;
+    bottom: -9.5vh;
+    transform: rotate(12deg);
+    background-image: linear-gradient(to top, rgba(255, 192, 203, 0.45), transparent), url("media/hane.png");
+    /* background-image: url("media/hane.png"); */
     background-size: 105%;
     background-repeat: no-repeat;
 }
+
+/* #kitty_overlay {
+    overflow: hidden;
+    position: absolute;
+    height: 100vh;
+    width: 28vw;
+    left: 0;
+    top: 0;
+    background-color: rgba(255, 0, 0, 0.276);
+    border: 3px solid white; 
+} */
+
+#player {
+    color: white;
+    position: absolute;
+    height: 100vh;
+    width: 28vw;
+    right: 0;
+    top: 0;
+    /* border: 3px solid white; */
+
+
+
+    background-color: rgba(201, 14, 92, 0.35);
+
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.track-art {
+    background-image: url("media/shinsetsu.png");
+    opacity: 0.9;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    height: 250px;
+    width: 250px;
+    background-size: cover;
+    border-radius: 5%;
+}
+
+.track-name {
+    font-size: 1.5rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 table {
     height: 66vh;
@@ -25,6 +113,7 @@ table {
     position: absolute;
     top: 50%;
     left: 50%;
+    padding-top: 20px;
     transform: translate(-50%, -50%);
     border-collapse: separate;
     border-spacing: 10px;
@@ -34,27 +123,28 @@ table {
 }
 
 td {
-    height: 100px;
-    width: 100px;
+    height: 7vh;
+    width: 4vw;
     text-align: center;
     font-size: 30px;
     border-radius: 10px;
 }
 
 #navbar {
-    background-color: rgb(255, 244, 244);
+    background-color: rgba(255, 255, 255, 0.815);
     opacity: 0.9;
     border-radius: 10px;
     height: 50px;
-    width: 33vw;
+    width: 30vw;
     padding: 10px;
     position: relative;
     top: 75px;
-    left: 50%;
+    left: 49.4%;
     transform: translate(-50%, -50%);
 }
 
 #newGame {
+    font-family: Gill Sans;
     position: absolute;
     right: 40px;
     top: 15px;
@@ -82,6 +172,7 @@ td {
 }
 
 #sfx {
+    font-family: Gill Sans;
     position: absolute;
     right: 45px;
     top: 43px;
@@ -89,3 +180,93 @@ td {
     box-shadow: none;
     user-select: none;
 }
+
+
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+   
+  .playpause-track,
+  .prev-track,
+  .next-track {
+    padding: 25px;
+    opacity: 0.8;
+    transition: opacity .2s;
+  }
+   
+  /* Change the opacity when mouse is hovered */
+  .playpause-track:hover,
+  .prev-track:hover,
+  .next-track:hover {
+    opacity: 1.0;
+  }
+   
+  /* Define the slider width so that it scales properly */
+  .slider_container {
+    width: 75%;
+    max-width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+   
+  /* Modify the appearance of the slider */
+  .seek_slider, .volume_slider {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    height: 5px;
+    background: black;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+  }
+   
+  /* Modify the appearance of the slider thumb */
+  .seek_slider::-webkit-slider-thumb,
+  .volume_slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background: white;
+    cursor: pointer;
+    border-radius: 50%;
+  }
+   
+  /* Change the opacity when mouse is hovered */
+  .seek_slider:hover,
+  .volume_slider:hover {
+    opacity: 1.0;
+  }
+   
+  .seek_slider {
+    width: 60%;
+  }
+   
+  .volume_slider {
+    width: 30%;
+  }
+   
+  .current-time,
+  .total-duration {
+    padding: 10px;
+  }
+   
+  i.fa-volume-down,
+  i.fa-volume-up {
+    padding: 10px;
+  }
+   
+  /* Change the mouse cursor to a pointer
+     when hovered over */
+  i.fa-play-circle,
+  i.fa-pause-circle,
+  i.fa-step-forward,
+  i.fa-step-backward {
+    cursor: pointer;
+  }

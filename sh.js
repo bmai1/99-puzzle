@@ -7,14 +7,11 @@ let goal = [[1,2,3,4],[5,6,7,8],[9,10,11,12],[13,14,15,0]];
 // location of empty cell [row, col]
 let empty = [-1, -1];
 
-// flag indicates when timer is running
+// flag indicates when timer is running and start audio
 let off = true;
+let flag = true;
 
 window.addEventListener("DOMContentLoaded", (event) => {
-    let bg = new Audio("media/bg.mp3");
-    bg.volume = 0.3;
-    bg.loop = true;
-    bg.play();
     shuffle();
     renderBoard();
     colorBoard();
@@ -67,8 +64,15 @@ window.onkeydown = e => {
     sfx.play();
     ++moves, moveCounter.innerText = moves;
     
-    // start timer upon first move
+    // start timer and audio upon first move
     if (off) { startTimer(), off = false; }
+    if (flag) {
+        let bg = new Audio("media/bg.mp3");
+        bg.volume = 0.3;
+        bg.loop = true;
+        bg.play();
+        flag = false;
+    }
     let i = empty[0], j = empty[1];
     if ((e.key == "ArrowUp" || e.key == "w") && empty[0] != 3) {
         // empty cell = cell below

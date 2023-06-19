@@ -1,0 +1,75 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-color: pink;
+}
+
+#kitty {
+    position: absolute;
+    height: 100vh;
+    width: 56vw;
+    left: -60px;
+    bottom: -25px;
+    transform: rotate(13deg);
+    
+    background-image: linear-gradient(to top, rgba(255, 192, 203, 0.5), transparent), url("media/hane.png");
+    background-size: 110%;
+    background-repeat: no-repeat;
+}
+
+table {
+    height: 66vh;
+    width: 33vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-collapse: separate;
+    border-spacing: 10px;
+    color: rgb(251, 208, 215);
+    font-family: Gill Sans;
+    /* border: solid 1px black; */
+    /* border-collapse: collapse; */
+}
+
+td {
+    height: 100px;
+    width: 100px;
+    text-align: center;
+    font-size: 30px;
+    border-radius: 10px;
+}
+
+#navbar {
+    position: absolute;
+    top: 50px;
+    right: 35%;
+}
+
+#newGame {
+    position: inline;
+    margin-left: 40px;
+    margin-right: 40px;
+    border-radius: 10px;
+    outline: none;
+    box-shadow: none;
+    user-select: none;
+}
+
+#timer {
+    font-size: 24px;
+    left: 0px;
+    margin-right: 50px;
+    position: inline;
+}
+
+#moves {
+    position: inline;
+}
+
+#sfx {
+    outline: none;
+    box-shadow: none;
+    user-select: none;
+}

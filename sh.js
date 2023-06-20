@@ -422,7 +422,7 @@ let track_list = [
     artist: "物語シリーズ",
     image: "media/shinsetsu.png",
     path: "media/bg1.mp3",
-    bgColor: "rgb(240, 98, 121, 0.9)"
+    bgColor: "rgb(240, 98, 121, 0.45)"
   },
   {
     name: "campo de girassol",

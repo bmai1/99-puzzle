@@ -246,7 +246,8 @@ const shuffleArray = (array) => {
 //     else return inv % 2 == 0;
 // }
 
-// official repo 
+// official repo (Shubham Singh) --> https://github.com/imshubhamsingh/15-puzzle/commit/e016ad30a9560d2450618a99e9e5b218123f50ae#diff-8478a7bac0240dc851826c916a23b44e3e318bf3e480424aea77d533e1d770fe
+// my inversion counter function to ensure puzzle solvability didn't work so i gave up
 
 const solvable = puzzle => {
     let parity = 0;

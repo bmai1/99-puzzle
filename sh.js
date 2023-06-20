@@ -9,8 +9,8 @@ let empty = [-1, -1];
 
 // flag indicates when timer is running
 let off = true;
-// let curr_song = null;
 let flag = true;
+let lockMoves = false; // lock moves when finished game
 
 window.addEventListener("DOMContentLoaded", (event) => {
     shuffle();
@@ -59,6 +59,7 @@ const sfxSelect = (sfx) => {
 let moves = 0;
 moveCounter = document.getElementById("moves");
 window.onkeydown = e => {
+    if(lockMoves) { return; }
     
     let i = empty[0], j = empty[1];
     if ((e.key == "ArrowUp" || e.key == "w") && empty[0] != 3) {
@@ -184,6 +185,7 @@ const shuffle = () => {
     while (!solvable(init.flat())); // holy motherfucker fucking fuck shit holy fuck i wanna die
     // console.log(init);
     stopTimer(), timerElement.innerHTML = "00:00:000", off = true;
+    lockMoves = false;
     moves = 0, moveCounter.innerText = "Moves: 0";
     stopTrackingAPM(), startTime2 = null;
     renderBoard();
@@ -337,7 +339,7 @@ let startTime2 = null;
 let keyCount = 0;
 
 // Function to start tracking APM
-function startTrackingAPM() {
+const startTrackingAPM = () => {
   startTime2 = Date.now();
   keyCount = 0;
   document.getElementById("apm-counter").innerText = "APM: 0";
@@ -347,12 +349,12 @@ function startTrackingAPM() {
 }
 
 // Function to count key actions
-function countKeyAction() {
+const countKeyAction = () => {
   keyCount++;
 }
 
 // Function to stop tracking APM and calculate APM value
-function stopTrackingAPM() {
+const stopTrackingAPM = () => {
   // Calculate elapsed time in minutes
   const endTime = Date.now();
   const elapsedTime = (endTime - startTime2) / 1000 / 60;
@@ -366,29 +368,6 @@ function stopTrackingAPM() {
   // Remove keydown event listener
   document.removeEventListener("keydown", countKeyAction);
 }
-
-
-// check winning state
-const check = () => {
-    // can't directly compare two array objects
-    for (let i = 0; i < 4; ++i) {
-        for (let j = 0; j < 4; ++j) {
-            if (init[i][j] != goal[i][j]) { return; }
-        }
-    }
-    console.log("Winner")
-    let gz = new Audio("media/victory.mp3");
-    gz.currentTime = 0.2;
-    gz.volume = 0.6; 
-    gz.play();
-    playAgain.style.display = "block";
-
-
-    stopTimer(), off = true;
-    stopTrackingAPM();
-    startTime2 = null;
-}
-
 
 const popup = document.getElementById("playAgain");
 const hide = () => {
@@ -579,4 +558,25 @@ const seekUpdate = () => {
     curr_time.textContent = currentMinutes + ":" + currentSeconds;
     total_duration.textContent = durationMinutes + ":" + durationSeconds;
   }
+}
+
+// check winning state
+const check = () => {
+  // can't directly compare two array objects
+  for (let i = 0; i < 4; ++i) {
+      for (let j = 0; j < 4; ++j) {
+          if (init[i][j] != goal[i][j]) { return; }
+      }
+  }
+  // console.log("Winner")
+  let gz = new Audio("media/victory.mp3");
+  gz.currentTime = 0.2;
+  gz.volume = 0.6; 
+  gz.play();
+  playAgain.style.display = "block";
+
+  lockMoves = true;
+  stopTimer(), off = true;
+  stopTrackingAPM();
+  startTime2 = null;
 }

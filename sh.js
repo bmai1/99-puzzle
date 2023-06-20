@@ -58,21 +58,7 @@ const sfxSelect = (sfx) => {
 let moves = 0;
 moveCounter = document.getElementById("moves");
 window.onkeydown = e => {
-    sfx = new Audio(`${sfx_name}`);
-    if (sfx_name == "media/s1.mp3") { sfx.volume = 1; }
-    else { sfx.volume = 0.5; }
-    sfx.play();
-    ++moves, moveCounter.innerText = "Moves: " + moves;
     
-    // start timer upon first move
-    if (off) { startTimer(), off = false; }
-    if (flag) {
-      let bg = new Audio("media/bg.mp3");
-      bg.volume = 0.3;
-      bg.loop = true;
-      bg.play();
-      flag = false;
-    }
     let i = empty[0], j = empty[1];
     if ((e.key == "ArrowUp" || e.key == "w") && empty[0] != 3) {
         // empty cell = cell below
@@ -103,6 +89,28 @@ window.onkeydown = e => {
     else if (e.key == "p") {
         console.log(init);
     }
+    else return; 
+
+    sfx = new Audio(`${sfx_name}`);
+    if (sfx_name == "media/s1.mp3") { sfx.volume = 0.7; }
+    else { sfx.volume = 0.5; }
+    sfx.play();
+    ++moves, moveCounter.innerText = "Moves: " + moves;
+
+    // start timer upon first move
+    if (off) { startTimer(), off = false; }
+    if (flag) {
+      let bg = new Audio("media/bg.mp3");
+      bg.volume = 0.3;
+      bg.loop = true;
+      bg.play();
+      flag = false;
+    }
+
+    if (startTime2 === null) {
+      startTrackingAPM();
+    }
+
     renderBoard();
     colorBoard();
     check();
@@ -175,6 +183,7 @@ const shuffle = () => {
     // console.log(init);
     stopTimer(), timerElement.innerHTML = "00:00:000", off = true;
     moves = 0, moveCounter.innerText = "Moves: 0";
+    stopTrackingAPM(), startTime2 = null;
     renderBoard();
     colorBoard();
     // console.log("I beg you to be solvable.");
@@ -320,6 +329,41 @@ const solvable = puzzle => {
 //     }
 // }
 
+// wee APM
+let startTime2 = null;
+let keyCount = 0;
+
+// Function to start tracking APM
+function startTrackingAPM() {
+  startTime2 = Date.now();
+  keyCount = 0;
+  document.getElementById("apm-counter").innerText = "APM: 0";
+
+  // Attach keydown event listener
+  document.addEventListener("keydown", countKeyAction);
+}
+
+// Function to count key actions
+function countKeyAction() {
+  keyCount++;
+}
+
+// Function to stop tracking APM and calculate APM value
+function stopTrackingAPM() {
+  // Calculate elapsed time in minutes
+  const endTime = Date.now();
+  const elapsedTime = (endTime - startTime2) / 1000 / 60;
+
+  // Calculate APM
+  const apm = Math.round((keyCount / elapsedTime));
+
+  // Update APM counter
+  document.getElementById("apm-counter").innerText = "APM: " + apm;
+
+  // Remove keydown event listener
+  document.removeEventListener("keydown", countKeyAction);
+}
+
 
 // check winning state
 const check = () => {
@@ -334,5 +378,16 @@ const check = () => {
     gz.currentTime = 0.2;
     gz.volume = 0.6; 
     gz.play();
+    playAgain.style.display = "block";
+
+
     stopTimer(), off = true;
+    stopTrackingAPM();
+    startTime2 = null;
+}
+
+
+const popup = document.getElementById("playAgain");
+const hide = () => {
+  playAgain.style.display = "none";
 }

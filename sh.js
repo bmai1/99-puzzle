@@ -396,6 +396,8 @@ const hide = () => {
 }
 
 // music player 
+// sayantanm19 --> https://www.geeksforgeeks.org/create-a-music-player-using-javascript/
+
 let player = document.getElementById("player");
 let track_art = document.querySelector(".track-art");
 let track_name = document.querySelector(".track-name");

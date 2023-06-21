@@ -47,6 +47,7 @@ window.onkeydown = e => {
         startTimer();
         startTrackingAPM();
         timerFlag = false; 
+        pauseEnabled = true;
     }
 
     let move_sfx = new Audio(`${move_sfx_path}`);
@@ -260,6 +261,7 @@ const check = () => {
     stopTrackingAPM();
 
     lockMoves = true;
+    pauseEnabled = false;
     // other flags are reset in newGame();
 }
 

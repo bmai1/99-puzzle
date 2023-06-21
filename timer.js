@@ -2,12 +2,41 @@ const timerElement = document.getElementById("timer");
 let startTime, endTime, elapsedTime, timerInterval;
 
 const startTimer = () => {
-  startTime = new Date().getTime();
-  timerInterval = setInterval(updateTimer, 10); // Update timer every 10 milliseconds
+    startTime = new Date().getTime();
+    // startTime = new Date().getTime();
+    timerInterval = setInterval(updateTimer, 10); // Update timer every 10 milliseconds
 }
 
 const stopTimer = () => {
   clearInterval(timerInterval);
+}
+
+const pauseButton = document.getElementById("pauseButton")
+let paused = false;
+let pauseEnabled = false; 
+const pauseHandler = () => {
+    if (!pauseEnabled) { return; }
+    if (paused) {
+        pauseButton.innerText = "pause";
+        pauseButton.style.backgroundColor = "#c0dcff";
+        pauseButton.style.color = "#5314dc";
+        lockMoves = false;
+        paused = false;
+
+        startTime = Date.now() - elapsedTime;
+        timerInterval = setInterval(updateTimer, 10);
+        paused = false;
+    }
+    else { 
+        pauseButton.innerText = "resume";
+        pauseButton.style.backgroundColor = "#b0ebd2";
+        pauseButton.style.color = "#042416";
+        lockMoves = true;
+
+        clearInterval(timerInterval);
+        elapsedTime = Date.now() - startTime;
+        paused = true;
+    }
 }
 
 const updateTimer = () => {
@@ -25,7 +54,6 @@ const updateTimer = () => {
 
   timerElement.innerHTML = timerDisplay;
 }
-
 
 // APM tracker
 let keyCount = 0;

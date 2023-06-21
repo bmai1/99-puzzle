@@ -20,7 +20,7 @@ table {
     width: 102px;
     font-size: 30px;
     text-align: center;
-    color: white;
+    color: rgb(255, 255, 255);
     border-radius: 15px;
 }
 
@@ -33,7 +33,7 @@ table {
     width: 81px;
     font-size: 25px;
     text-align: center;
-    color: white;
+    color: rgb(173, 247, 255);
     border-radius: 10px;
 }
 
@@ -46,6 +46,6 @@ table {
     width: 37px;
     font-size: 15px;
     text-align: center;
-    color: white;
+    color: rgb(252, 234, 154);
     border-radius: 5px;
 }

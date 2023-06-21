@@ -153,6 +153,16 @@ const newGame = () => {
 
     stopTimer();
     stopTrackingAPM();
+
+    if (paused) { 
+        paused = false;
+        pauseButton.innerText = "pause";
+        pauseButton.style.backgroundColor = "#c0dcff";
+        pauseButton.style.color = "#5314dc";
+        stopTimer();
+    }
+    pauseEnabled = false; 
+
     moveCount = 0;
     timerElement.innerText = "00:00:000";
     moveCounter.innerText = "Moves: 0";

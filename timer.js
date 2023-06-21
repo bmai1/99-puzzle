@@ -21,7 +21,6 @@ const pauseHandler = () => {
         pauseButton.style.backgroundColor = "#c0dcff";
         pauseButton.style.color = "#5314dc";
         lockMoves = false;
-        paused = false;
 
         startTime = Date.now() - elapsedTime;
         timerInterval = setInterval(updateTimer, 10);

@@ -47,28 +47,28 @@ let track_list = [
     artist: "shibayan records",
     image: "media/cdgir.png",
     path: "media/bg2.mp3",
-    bgColor: "rgb(36, 34, 102, 0.8)"
+    bgColor: "rgb(36, 34, 102, 0.5)"
   },
   {
     name: "garota de ipanema",
     artist: "lisa ono",
     image: "media/lisa.png",
     path: "media/bg3.mp3",
-    bgColor: "rgb(102, 85, 95, 0.9)"
+    bgColor: "rgb(28, 27, 27, 0.9)"
   },
   {
     name: "don't go breaking my heart",
     artist: "roger nichols & the small circle of friends",
     image: "media/breaking.png",
     path: "media/bg4.mp3",
-    bgColor: "rgb(252, 82, 3, 0.6)"
+    bgColor: "rgb(252, 82, 3, 0.5)"
   },
   {
     name: "maiden's longing",
     artist: "yu-peng chen",
     image: "media/maidens.png",
     path: "media/bg5.mp3",
-    bgColor: "rgb(68, 145, 158, 0.6)"
+    bgColor: "rgb(86, 155, 176, 0.7)"
   },
 ];
 

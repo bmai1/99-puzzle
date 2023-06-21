@@ -31,6 +31,13 @@ window.addEventListener("DOMContentLoaded", () => {
 
 window.onkeydown = e => {
     if (lockMoves) { return; }
+
+    if ((e.key == "ArrowUp" || e.key == "w") && empty[0] != boardSize - 1) { editBoard("up"); }
+    else if ((e.key == "ArrowDown" || e.key == "s") && empty[0] != 0) { editBoard("down"); }
+    else if ((e.key == "ArrowLeft" || e.key == "a") && empty[1] != boardSize - 1) { editBoard("left"); }
+    else if ((e.key == "ArrowRight" || e.key == "d") && empty[1] != 0) { editBoard("right"); }
+    else return; 
+
     if (firstInteraction) {
         loadTrack(track_index);
         playpauseTrack();
@@ -41,12 +48,6 @@ window.onkeydown = e => {
         startTrackingAPM();
         timerFlag = false; 
     }
-
-    if ((e.key == "ArrowUp" || e.key == "w") && empty[0] != boardSize - 1) { editBoard("up"); }
-    else if ((e.key == "ArrowDown" || e.key == "s") && empty[0] != 0) { editBoard("down"); }
-    else if ((e.key == "ArrowLeft" || e.key == "a") && empty[1] != boardSize - 1) { editBoard("left"); }
-    else if ((e.key == "ArrowRight" || e.key == "d") && empty[1] != 0) { editBoard("right"); }
-    else return; 
 
     let move_sfx = new Audio(`${move_sfx_path}`);
     move_sfx.volume = 0.6;
@@ -145,6 +146,9 @@ const colorBoard = () => {
 const newGame = () => {
     do { shuffleBoard(boardArray); }
     while (!solvable(boardArray.flat()));
+
+    let move_sfx = new Audio(`${move_sfx_path}`);
+    move_sfx.play();
 
     stopTimer();
     stopTrackingAPM();

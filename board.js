@@ -154,6 +154,7 @@ const newGame = () => {
     timerFlag = true;
     lockMoves = false;
 
+    hideAgain();
     renderBoard();
     colorBoard();
 }

@@ -39,9 +39,9 @@ window.onkeydown = e => {
     else return; 
 
     if (firstInteraction) {
+        firstInteraction = false;
         loadTrack(track_index);
         playpauseTrack();
-        firstInteraction = false;
     }
     if (timerFlag) {
         startTimer();
@@ -241,10 +241,29 @@ const solvable = puzzle => {
     }
 };
 
+
+let hiddenKitty = false;
+let kitty = document.getElementById("kitty");
+const hideButton = document.getElementById("hideGirls");
 const playAgain = document.getElementById("playAgain");
 const hideAgain = () => {
     playAgain.style.display = "none";
 }
+const hideGirls = () => {
+    if (hiddenKitty) {
+        kitty.style.display = "block";
+        player.style.display = "flex";
+        hideButton.innerText = "hide";
+        hiddenKitty = false;
+    }
+    else {
+        kitty.style.display = "none";
+        player.style.display = "none";
+        hideButton.innerText = "unhide";
+        hiddenKitty = true;
+    }
+}
+
 
 const check = () => {
     for (let i = 0; i < boardSize; ++i) {

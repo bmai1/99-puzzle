@@ -1,8 +1,9 @@
 #player {
+    opacity: 0.9;
     height: 105vh;
-    width: 28vw;
+    width: 27vw;
     position: absolute;
-    right: -10px;
+    right: 0;
     top: 0;
   
     color: white;

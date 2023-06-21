@@ -86,7 +86,21 @@ select { font-family: Gill Sans; }
     user-select: none;
 }
 
+#hideGirls {
+    position: absolute;
+    right: 165px;
+    top: 43px;
+
+    height: 20px;
+    /* border: none; */
+    border-radius: 5px;
+    outline: none;
+    box-shadow: none;
+    user-select: none;
+}
+
 #kitty {
+    opacity: 0.8;
     position: absolute;
     height: 110vh;
     width: 56vw;

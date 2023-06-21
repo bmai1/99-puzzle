@@ -113,6 +113,7 @@ const playpauseTrack = () => {
 }
  
 const playTrack = () => {
+  if (firstInteraction) { return; }
   // Play the loaded track
   curr_track.play();
   isPlaying = true;
@@ -122,6 +123,7 @@ const playTrack = () => {
 }
  
 const pauseTrack = () => {
+  if (firstInteraction) { return; }
   // Pause the loaded track
   curr_track.pause();
   isPlaying = false;
@@ -131,6 +133,7 @@ const pauseTrack = () => {
 }
  
 const nextTrack = () => {
+  if (firstInteraction) { return; }
   // Go back to the first track if the
   // current one is the last in the track list
   if (track_index < track_list.length - 1)
@@ -143,6 +146,7 @@ const nextTrack = () => {
 }
  
 const prevTrack = () => {
+  if (firstInteraction) { return; }
   // Go back to the last track if the
   // current one is the first in the track list
   if (track_index > 0)

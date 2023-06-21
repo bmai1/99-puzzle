@@ -1,0 +1,51 @@
+table {
+    display: block;
+    height: 66vh;
+    width: 35vw;
+    position: absolute;
+    top: 50%;
+    left: 52%;
+    padding-top: 20px;
+    transform: translate(-50%, -50%);
+    border-collapse: separate;
+    border-spacing: 5px;
+}
+
+#board16 {
+    display: none;
+}
+
+#board16 td {
+    height: 102px;
+    width: 102px;
+    font-size: 30px;
+    text-align: center;
+    color: white;
+    border-radius: 15px;
+}
+
+#board25 {
+    display: none;
+}
+
+#board25 td {
+    height: 81px;
+    width: 81px;
+    font-size: 25px;
+    text-align: center;
+    color: white;
+    border-radius: 10px;
+}
+
+#board100 {
+    display: none;
+}
+
+#board100 td {
+    height: 37px;
+    width: 37px;
+    font-size: 15px;
+    text-align: center;
+    color: white;
+    border-radius: 5px;
+}

@@ -6,33 +6,6 @@ body {
     font-family: Gill Sans;
 }
 
-#overlay {
-    display: none;
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    width: 100vw;
-    height: 100vh;
-    background-image: url("media/overlay.png");
-    background-size: cover;
-    opacity: 0.8;
-}
-
-#hide_watermark {
-    display: none;
-
-    position: absolute;
-    transform: rotate(15deg);
-    bottom: -10px;
-    left: -10px;
-    height: 5vh;
-    width: 5vh;
-    opacity: 0.8;
-    border-radius: 5px;
-    background-color: rgb(255, 255, 255);
-}
-
 #kitty {
     position: absolute;
     height: 110vh;
@@ -46,28 +19,14 @@ body {
     background-repeat: no-repeat;
 }
 
-/* #kitty_overlay {
-    overflow: hidden;
-    position: absolute;
-    height: 100vh;
-    width: 28vw;
-    left: 0;
-    top: 0;
-    background-color: rgba(255, 0, 0, 0.276);
-    border: 3px solid white; 
-} */
-
 #player {
-    color: white;
-    position: absolute;
     height: 105vh;
     width: 28vw;
+    position: absolute;
     right: -10px;
     top: 0;
-    /* border: 3px solid white; */
-
-
-
+  
+    color: white;
     background-color: rgba(201, 14, 92, 0.35);
 
     display: flex;
@@ -76,7 +35,6 @@ body {
     align-items: center;
     justify-content: center;
 }
-
 
 .track-art {
     background-image: url("media/shinsetsu.png");
@@ -104,8 +62,6 @@ table {
     border-collapse: separate;
     border-spacing: 10px;
     color: rgb(251, 208, 215);
-    /* border: solid 1px black; */
-    /* border-collapse: collapse; */
 }
 
 td {
@@ -130,13 +86,14 @@ td {
 }
 
 #newGame {
-    font-family: Gill Sans;
     position: absolute;
     right: 40px;
     top: 15px;
     font-size: 16px;
+
     color: crimson;
     background-color: pink;
+    
     border: none;
     border-radius: 10px;
     outline: none;
@@ -145,13 +102,12 @@ td {
 }
 
 #timer {
+  position: absolute;
     font-size: 24px;
     left: 25px;
-    
-    position: absolute;
 }
 
-#moves {
+#moveCount {
     position: absolute;
     top: 42px;
     left: 35px;
@@ -166,8 +122,6 @@ td {
     box-shadow: none;
     user-select: none;
 }
-
-
 
 .buttons {
     display: flex;

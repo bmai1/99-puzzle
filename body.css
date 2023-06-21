@@ -1,0 +1,126 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-color: pink;
+    font-family: Gill Sans;
+}
+
+button { font-family: Gill Sans; }
+select { font-family: Gill Sans; }
+
+#navbar {
+    background-color: rgba(255, 255, 255, 0.815);
+    opacity: 0.9;
+    border-radius: 10px;
+    height: 50px;
+    width: 30vw;
+    padding: 10px;
+    position: relative;
+    top: 75px;
+    left: 49.4%;
+    transform: translate(-50%, -50%);
+}
+
+#timer {
+    position: absolute;
+    left: 25px;
+    font-size: 24px;
+}
+
+#moveCount {
+    position: absolute;
+    top: 42px;
+    left: 35px;
+}
+
+#newGame {
+    position: absolute;
+    right: 40px;
+    top: 15px;
+    font-size: 16px;
+
+    color: crimson;
+    background-color: pink;
+    
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    box-shadow: none;
+    user-select: none;
+}
+
+#sfxSelector {
+    position: absolute;
+    right: 100px;
+    top: 43px;
+
+    outline: none;
+    box-shadow: none;
+    user-select: none;
+}
+
+#modeSelector {
+    position: absolute;
+    right: 40px;
+    top: 43px;
+
+    outline: none;
+    box-shadow: none;
+    user-select: none;
+}
+
+#kitty {
+    position: absolute;
+    height: 110vh;
+    width: 56vw;
+    left: -4vw;
+    bottom: -9.5vh;
+    transform: rotate(12deg);
+    background-image: linear-gradient(to top, rgba(255, 192, 203, 0.45), transparent), url("media/hane.png");
+    /* background-image: url("media/hane.png"); */
+    background-size: 105%;
+    background-repeat: no-repeat;
+}
+
+#playAgain {
+    display: none; 
+    position: absolute;
+    top: 51%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 35vw;
+    height: 65vh;
+    
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.591);
+    text-align: center;
+}
+
+#playAgainButton {
+    width: 200px;
+    height: 50px;
+
+    color: white;
+    background-color: rgb(240, 98, 121);
+    font-size: 24px;
+    font-family: 'Trebuchet MS';
+
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    box-shadow: none;
+    user-select: none;
+  }
+
+#apm-counter {
+    margin-bottom: 10px;
+    color: crimson;
+}
+
+#winMessage {
+    margin-top: 150px;
+    font-size: 50px;
+    color: crimson;
+}
+

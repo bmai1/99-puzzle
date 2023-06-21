@@ -2,24 +2,25 @@
 <html>
     <head>
         <meta lang="en" charset="utf-8">
-        <link rel="stylesheet" href="styles.css">
-        <link rel="shortcut icon" href="https://cdn.onlinewebfonts.com/svg/img_99055.png">
+        <link rel="stylesheet" href="body.css">
+        <link rel="stylesheet" href="board.css">
+        <link rel="stylesheet" href="audioPlayer.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
-        <title>15 Puzzle</title>
+        <link rel="shortcut icon" href="https://cdn.onlinewebfonts.com/svg/img_99055.png">
+        <title>99 Puzzle</title>
     </head>
     <body>
-        <div id="overlay"></div>
-        <!-- <div id="hide_watermark"></div> -->
-        <div id="kitty_overlay">
-            <div id="kitty"></div>
-        </div>
+        <div id="kitty"></div>
+
         <div id="player">
+
             <div class="details">
                 <div class="now-playing">now playing...</div>
                 <div class="track-art"></div>
                 <div class="track-name">shinsetsu (親切)</div>
                 <div class="track-artist">物語シリーズ</div>
             </div>
+            
             <div class="buttons">
                 <div class="prev-track" onclick="prevTrack()">
                   <i class="fa fa-step-backward fa-2x"></i>
@@ -30,40 +31,47 @@
                 <div class="next-track" onclick="nextTrack()">
                   <i class="fa fa-step-forward fa-2x"></i>
                 </div>
-              </div>
+            </div>
            
-              <!-- Define the section for displaying the seek slider-->
-              <div class="slider_container">
+            <!-- seek slider-->
+            <div class="slider_container">
                 <div class="current-time">00:00</div>
                 <input type="range" min="1" max="100"
                   value="0" class="seek_slider" onchange="seekTo()">
                 <div class="total-duration">00:00</div>
-              </div>
+            </div>
            
-              <!-- Define the section for displaying the volume slider-->
-              <div class="slider_container">
+            <!-- volume slider-->
+            <div class="slider_container">
                 <i class="fa fa-volume-down"></i>
                 <input type="range" min="1" max="100"
                   value="99" class="volume_slider" onchange="setVolume()">
                 <i class="fa fa-volume-up"></i>
-              </div>
             </div>
-
-
+        
         </div>
+
         <div id="navbar">
             <div>
                 <span id="timer">00:00:000</span>
-                <button id="newGame" onclick="shuffle()">new game</button>
+                <button id="newGame" onclick="newGame()">new game</button>
             </div>
-            <span id="moves">Moves: 0</span>
-            <select id="sfx" onchange="sfxSelect(this.value)">
+            <span id="moveCount">Moves: 0</span>
+            <select id="sfxSelector" onchange="sfxSelect(this.value)">
                 <option value="media/s1.mp3">wood</option>
                 <option value="media/s2.mp3">marble</option>
                 <option value="media/s3.mp3">bubble</option>
             </select>  
+
+            <select id="modeSelector" onchange="changeMode(this.value)">
+                <option value="4">4x4</option>
+                <option value="5">5x5</option>
+                <option value="10">10x10</option>
+            </select>  
+
         </div>
-        <table id="board">
+
+        <table id="board16">
             <tbody>
                 <tr>
                     <td>1</td>
@@ -91,12 +99,181 @@
                 </tr>
             </tbody>
         </table>
-        <div id="playAgain" onclick="hide()">
-            <h1 id="win">you win. hooray.</h1>
+
+        <table id="board25">
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>7</td>
+                    <td>8</td>
+                    <td>9</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>12</td>
+                    <td>13</td>
+                    <td>14</td>
+                    <td>15</td>
+
+                </tr>
+                <tr>
+                    <td>16</td>
+                    <td>17</td>
+                    <td>18</td>
+                    <td>19</td>
+                    <td>20</td>
+                </tr>
+                <tr>
+                    <td>21</td>
+                    <td>22</td>
+                    <td>23</td>
+                    <td>24</td>
+                    <td>0</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <table id="board100">
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>7</td>
+                    <td>8</td>
+                    <td>9</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>12</td>
+                    <td>13</td>
+                    <td>14</td>
+                    <td>15</td>
+                    <td>16</td>
+                    <td>17</td>
+                    <td>18</td>
+                    <td>19</td>
+                    <td>20</td>
+                </tr>
+                <tr>
+                    <td>21</td>
+                    <td>22</td>
+                    <td>23</td>
+                    <td>24</td>
+                    <td>25</td>
+                    <td>26</td>
+                    <td>27</td>
+                    <td>28</td>
+                    <td>29</td>
+                    <td>30</td>
+                </tr>
+                <tr>
+                    <td>31</td>
+                    <td>32</td>
+                    <td>33</td>
+                    <td>34</td>
+                    <td>35</td>
+                    <td>36</td>
+                    <td>37</td>
+                    <td>38</td>
+                    <td>39</td>
+                    <td>40</td>
+                </tr>
+                <tr>
+                    <td>41</td>
+                    <td>42</td>
+                    <td>43</td>
+                    <td>44</td>
+                    <td>45</td>
+                    <td>46</td>
+                    <td>47</td>
+                    <td>48</td>
+                    <td>49</td>
+                    <td>50</td>
+                </tr>
+                <tr>
+                    <td>51</td>
+                    <td>52</td>
+                    <td>53</td>
+                    <td>54</td>
+                    <td>55</td>
+                    <td>56</td>
+                    <td>57</td>
+                    <td>58</td>
+                    <td>59</td>
+                    <td>60</td>
+                </tr>
+                <tr>
+                    <td>61</td>
+                    <td>62</td>
+                    <td>63</td>
+                    <td>64</td>
+                    <td>65</td>
+                    <td>64</td>
+                    <td>67</td>
+                    <td>68</td>
+                    <td>69</td>
+                    <td>70</td>
+                </tr>
+                <tr>
+                    <td>71</td>
+                    <td>72</td>
+                    <td>73</td>
+                    <td>74</td>
+                    <td>75</td>
+                    <td>76</td>
+                    <td>77</td>
+                    <td>78</td>
+                    <td>79</td>
+                    <td>80</td>
+                </tr>
+                <tr>
+                    <td>81</td>
+                    <td>82</td>
+                    <td>83</td>
+                    <td>84</td>
+                    <td>85</td>
+                    <td>86</td>
+                    <td>87</td>
+                    <td>88</td>
+                    <td>89</td>
+                    <td>90</td>
+                </tr>
+                <tr>
+                    <td>91</td>
+                    <td>92</td>
+                    <td>93</td>
+                    <td>94</td>
+                    <td>95</td>
+                    <td>96</td>
+                    <td>97</td>
+                    <td>98</td>
+                    <td>99</td>
+                    <td></td>
+                </tr> 
+            </tbody>
+        </table>
+
+        <div id="playAgain" onclick="hideAgain()">
+            <h1 id="winMessage">you win. hooray.</h1>
             <div id="apm-counter">APM: 0</div>
-            <button id="playA" onclick="shuffle()">play again</button>
+            <button id="playAgainButton" onclick="newGame()">play again</button>
         </div>
+
+        <script src="timer.js"></script>
+        <script src="audio.js"></script>
+        <script src="board.js"></script>
 	</body>
-    
-    <script src="sh.js"></script>
 </html>

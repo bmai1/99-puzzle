@@ -114,7 +114,7 @@ select { font-family: Gill Sans; }
 }
 
 #playAgain {
-    display: none; 
+    /* display: none;  */
     position: absolute;
     top: 51%;
     left: 50%;
@@ -142,6 +142,11 @@ select { font-family: Gill Sans; }
     box-shadow: none;
     user-select: none;
   }
+
+#record {
+    margin-bottom: 5px; 
+    color: crimson;
+}
 
 #apm-counter {
     margin-bottom: 10px;

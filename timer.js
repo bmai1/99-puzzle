@@ -8,7 +8,7 @@ const startTimer = () => {
 }
 
 const stopTimer = () => {
-  clearInterval(timerInterval);
+    clearInterval(timerInterval);
 }
 
 const pauseButton = document.getElementById("pauseButton")
@@ -74,10 +74,37 @@ const stopTrackingAPM = () => {
     const apm = Math.round((keyCount / elapsedMinutes));
   
     // Update APM counter
-    document.getElementById("apm-counter").innerText = "APM: " + apm;
+    document.getElementById("apm-counter").innerText = "apm: " + apm;
 
     // Remove keydown event listener
     document.removeEventListener("keydown", countKeyAction);
 }
-  
-  
+
+
+// changes bestTime in localStorage corresponsding to current board
+const bestTimeHandler = () => {
+    if (currentBoard == "b16") {
+        let bestTime16 = localStorage.getItem("bestTime16");
+        if (bestTime16 == null || elapsedTime < bestTime16) {
+            localStorage.setItem("bestTime16", elapsedTime);
+        }
+        bestTime16 = localStorage.getItem("bestTime16");
+        record.innerText = "best time: " + bestTime16 + " ms";
+    }
+    else if (currentBoard == "b25") {
+        let bestTime25 = localStorage.getItem("bestTime25");
+        if (bestTime25 == null || elapsedTime < bestTime25) {
+            localStorage.setItem("bestTime25", elapsedTime);
+        }
+        bestTime25 = localStorage.getItem("bestTime25");
+        record.innerText = "best time: " + bestTime25 + " ms";
+    }
+    else if (currentBoard == "b100") {
+        let bestTime100 = localStorage.getItem("bestTime100");
+        if (bestTime100 == null || elapsedTime < bestTime100) {
+            localStorage.setItem("bestTime100", elapsedTime);
+        }
+        bestTime100 = localStorage.getItem("bestTime100");
+        record.innerText = "best time: " + bestTime100 + " ms";
+    }
+}

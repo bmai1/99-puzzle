@@ -274,7 +274,7 @@ const hideGirls = () => {
     }
 }
 
-
+const record = document.getElementById("record");
 const check = () => {
     for (let i = 0; i < boardSize; ++i) {
         for (let j = 0; j < boardSize; ++j) {
@@ -288,7 +288,7 @@ const check = () => {
     win.play();
     stopTimer();
     stopTrackingAPM();
-
+    bestTimeHandler();
     lockMoves = true;
     pauseEnabled = false;
     // other flags are reset in newGame();

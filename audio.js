@@ -1,7 +1,8 @@
-let move_sfx_path = "media/s1.mp3";
+let move_sfx = new Audio("media/s1.mp3");
 
 const sfxSelect = (path) => {
-    move_sfx_path = path;
+    move_sfx = new Audio(`${path}`);
+    move_sfx.volume = 0.6;
 }
 
 const sfxSelector = document.getElementById("sfxSelector");
@@ -61,15 +62,36 @@ let track_list = [
     artist: "roger nichols & the small circle of friends",
     image: "media/breaking.png",
     path: "media/bg4.mp3",
-    bgColor: "rgb(252, 82, 3, 0.5)"
+    bgColor: "rgb(196, 64, 2, 0.8)"
+  },
+  {
+    name: "misty mauve (1991 remix)",
+    artist: "masayuki suzuki",
+    image: "media/martini.png",
+    path: "media/bg5.mp3",
+    bgColor: "rgb(27, 22, 51, 0.9)"
+  },
+  {
+    name: "two cents party",
+    artist: "erikson jayanto",
+    image: "media/twocent.png",
+    path: "media/bg6.mp3",
+    bgColor: "rgb(97, 97, 97, 0.6)"
+  },
+  {
+    name: "romantico",
+    artist: "800 cherries",
+    image: "media/cherry.png",
+    path: "media/bg7.mp3",
+    bgColor: "rgb(58, 189, 78, 0.7)"
   },
   {
     name: "maiden's longing",
     artist: "yu-peng chen",
     image: "media/maidens.png",
-    path: "media/bg5.mp3",
+    path: "media/bg8.mp3",
     bgColor: "rgb(86, 155, 176, 0.7)"
-  },
+  }
 ];
 
 const loadTrack = (track_index) => {

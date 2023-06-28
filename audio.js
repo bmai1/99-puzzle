@@ -91,6 +91,13 @@ let track_list = [
     image: "media/maidens.png",
     path: "media/bg8.mp3",
     bgColor: "rgb(86, 155, 176, 0.7)"
+  },
+  {
+    name: "shangri-la",
+    artist: "denki groove",
+    image: "media/shangri.jpg",
+    path: "media/bg9.mp3",
+    bgColor: "rgb(252, 219, 3, 0.6)"
   }
 ];
 

@@ -1,5 +1,5 @@
-# 99 Puzzle
-This project is a parody of 15 puzzle with more features such as an APM tracker, best time with localStorage, and audio.
+# 99-Puzzle
+This project is a parody of the 15-puzzle with more features such as an APM tracker, best time with localStorage, and audio.
 It is better optimized for speedrunning as there are no tile animations, which allows for frame-lossless rotations.
 
 

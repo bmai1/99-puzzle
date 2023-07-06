@@ -4,7 +4,7 @@ It is better optimized for speedrunning as there are no tile animations, which a
 
 
 ## Objective: 
-The numbers on the board are randomized every game. Rearrange the numbers into an increasing sequence as fast as possible.
+The location of the numbers on the board are shuffled every game. Rearrange the numbers into an increasing sequence as fast as possible.
 There are no "incorrect moves", but some sequences of inputs will order the board more efficiently than others.
 
 ## Controls: 

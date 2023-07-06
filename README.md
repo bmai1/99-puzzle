@@ -1,14 +1,16 @@
 # 99 Puzzle
-This project is a parody of 15 puzzle with more features such as audio, best time with localStorage, and APM tracker.
-Better optimized for speedrunning as there are no tile animations, allowing for frame-lossless rotations
+This project is a parody of 15 puzzle with more features such as an APM tracker, best time with localStorage, and audio.
+It is better optimized for speedrunning as there are no tile animations, which allows for frame-lossless rotations.
 
 
 ## Objective: 
-Rearrange numbers into an increasing sequence as fast as possible.
-
+The numbers on the board are randomized every game. Rearrange the numbers into an increasing sequence as fast as possible.
+There are no "incorrect moves", but some sequences of inputs will order the board more efficiently than others.
 
 ## Controls: 
-Arrow keys will move adjacent tiles into the empty cell. 
+Arrow keys will move adjacent tiles into the empty cell. WASD is supported as well, but not recommended. Background music
+can be toggled via the audio player, and move sfx is selected with the dropdown menu. Clicking "New Game" will shuffle the
+board and reset the timer. 
 
 
 ## Preview Images:

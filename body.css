@@ -100,7 +100,7 @@ select { font-family: Gill Sans; }
 }
 
 #kitty {
-    opacity: 0.8;
+    opacity: 1;
     position: absolute;
     height: 110vh;
     width: 56vw;

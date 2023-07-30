@@ -50,8 +50,10 @@ window.onkeydown = e => {
         pauseEnabled = true;
     }
 
-    move_sfx.currentTime = 0;
-    move_sfx.play();
+    if (!mutedSfx) {
+        move_sfx.currentTime = 0;
+        move_sfx.play();
+    }
     moveCount++; 
     moveCounter.innerText = "Moves: " + moveCount;
     renderBoard();
@@ -146,8 +148,10 @@ const colorBoard = () => {
 const newGame = () => {
     do { shuffleBoard(boardArray); }
     while (!solvable(boardArray.flat()));
-    move_sfx.currentTime = 0;
-    move_sfx.play();
+    if (!mutedSfx) {
+        move_sfx.currentTime = 0;
+        move_sfx.play();
+    }
     stopTimer();
     stopTrackingAPM();
 

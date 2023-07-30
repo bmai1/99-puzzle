@@ -66,10 +66,26 @@ select { font-family: Gill Sans; }
     user-select: none;
 }
 
+#muteSfx{
+    position: absolute;
+    right: 195px;
+    top: 50px;
+    font-size: 15px;
+
+    color: rgb(16, 48, 26);
+    background-color: rgb(199, 225, 203);
+    
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    box-shadow: none;
+    user-select: none;
+}
+
 #sfxSelector {
     position: absolute;
-    right: 100px;
-    top: 43px;
+    right: 125px;
+    top: 50px;
 
     outline: none;
     box-shadow: none;
@@ -88,7 +104,7 @@ select { font-family: Gill Sans; }
 
 #hideGirls {
     position: absolute;
-    right: 165px;
+    right: 105px;
     top: 43px;
 
     height: 20px;

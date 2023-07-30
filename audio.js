@@ -228,3 +228,21 @@ const seekUpdate = () => {
     total_duration.textContent = durationMinutes + ":" + durationSeconds;
   }
 }
+
+const sfxB = document.getElementById("muteSfx");
+let mutedSfx = false
+const muteSfx = () => {
+  console.log('sfx muted');
+  if (!mutedSfx)  {
+    mutedSfx = true;
+    sfxB.innerHTML = 'unmute sfx';
+    sfxB.style.color = "#f7d2f3";
+    sfxB.style.backgroundColor = "#75386e";
+  }
+  else {
+    mutedSfx = false;
+    sfxB.innerHTML = 'mute sfx';
+    sfxB.style.color = "#10301a";
+    sfxB.style.backgroundColor = "#c7e1cb";
+  }
+}

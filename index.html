@@ -51,17 +51,14 @@
         
         </div>
 
+	<button id="muteSfx" onclick="muteSfx()">mute sfx</button>
+        <select id="sfxSelector" onchange="sfxSelect(this.value)">
         <div id="navbar">
             <div>
                 <span id="timer">00:00:000</span>
                 <button id="newGame" onclick="newGame()">new game</button>
             </div>
             <span id="moveCount">Moves: 0</span>
-            <select id="sfxSelector" onchange="sfxSelect(this.value)">
-                <option value="media/s1.mp3">wood</option>
-                <option value="media/s2.mp3">marble</option>
-                <option value="media/s3.mp3">bubble</option>
-            </select>  
 
             <select id="modeSelector" onchange="changeMode(this.value)">
                 <option value="4">4x4</option>

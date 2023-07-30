@@ -284,9 +284,11 @@ const check = () => {
     }
     // console.log("victory");
     playAgain.style.display = "block";
-    let win = new Audio("media/victory.mp3");
-    win.currentTime = 0.3;
-    win.play();
+    if (!mutedSfx) {
+        let win = new Audio("media/victory.mp3");
+        win.currentTime = 0.3;
+        win.play();
+    }
     stopTimer();
     stopTrackingAPM();
     bestTimeHandler();

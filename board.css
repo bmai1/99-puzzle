@@ -49,3 +49,7 @@ table {
     color: rgb(252, 234, 154);
     border-radius: 5px;
 }
+
+#currCell {
+    transition: transform 0.2s ease-in-out;
+}

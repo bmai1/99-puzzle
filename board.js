@@ -126,7 +126,6 @@ const renderBoard = () => {
     }
 }
 
-
 // colors board if in correct position
 const colorBoard = () => {
     for (let i = 0; i < boardSize; ++i) {
@@ -147,10 +146,26 @@ const colorBoard = () => {
                 cells[j].style.backgroundColor = "#140f14"; 
                 cells[j].style.opacity = "0.80";
             }
-    
+
+            // cells[j].id = 'currCell';
+            // let currCell = document.getElementById('currCell');
+            // currCell.style.scale = "1.1";
+            // setTimeout(() => { cells[j].style.scale = "1" }, 200);
+            // cells[j].id = '';
+            
         }
     }
 }
+
+// let p;
+// const pulse = (element) => {
+//     if (p) clearTimeout(p)
+//     element.style.transform = 'scale(1.05)';
+//     p = setTimeout(() => {
+//         // Second pulse (end)
+//         element.style.transform = 'scale(1)';
+//     }, 200);
+// }
 
 
 const newGame = () => {

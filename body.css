@@ -157,9 +157,12 @@ select { font-family: Gill Sans; }
     color: crimson;
 }
 
+button:hover {
+    filter: brightness(95%);
+}
 
 #footbar {
-    background-color: rgba(80, 70, 183, 0.4);
+    background-color: rgba(80, 70, 183, 0.5);
     opacity: 0.9;
     border-radius: 20px;
     height: 40px;
@@ -177,6 +180,7 @@ select { font-family: Gill Sans; }
     right: 190px;
     top: 15px;
     font-size: 30px;
+    transition: color 0.3s ease;
 }
 #spotify {
     color: black;
@@ -185,6 +189,7 @@ select { font-family: Gill Sans; }
     right: 231px;
     top: 15px;
     font-size: 29px;
+    transition: color 0.3s ease;
 }
 #reddit {
     color: black;
@@ -193,6 +198,7 @@ select { font-family: Gill Sans; }
     left: 155px;
     top: 17px;
     font-size: 25px;
+    transition: color 0.3s ease;
 }
 
 #bg-colorer {
@@ -200,6 +206,12 @@ select { font-family: Gill Sans; }
     left: 300px;
     bottom: 10px;
 }
+
+
+#reddit:hover, #spotify:hover, #ghub:hover {
+    color: rgb(99, 0, 79);
+}
+
 
 #bg-color-toggle {
     position: relative;

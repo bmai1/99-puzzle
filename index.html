@@ -10,7 +10,8 @@
         <title>99 Puzzle</title>
     </head>
     <body>
-        <div id="kitty"></div>
+        <img id="kitten" src="media/hane.png">
+        <!-- <div id="kitty"></div> -->
         <div id="player">
 
             <div class="details">
@@ -50,12 +51,20 @@
         
         </div>
 
+        <!-- control buttons -->
+
 	    <button id="muteSfx" onclick="muteSfx()">mute sfx</button>
         <select id="sfxSelector" onchange="sfxSelect(this.value)">
             <option value="media/s1.mp3">wood</option>
             <option value="media/s2.mp3">marble</option>
             <option value="media/s3.mp3">bubble</option>
         </select> 
+
+        <button id="bg-color-toggle" onclick="showColorer()">bg color</button>
+        <div style="display: none" id="bg-colorer">
+            <div id="color-indicator"></div>
+            <div id="color-picker"></div>
+        </div>
 
         <div id="navbar">
             <div>
@@ -74,6 +83,8 @@
             <button id="hideGirls" onclick="hideGirls()">hide</button>
 
         </div>
+
+        <!-- endof controls -->
 
         <table id="board16">
             <tbody>
@@ -277,8 +288,10 @@
             <button id="playAgainButton" onclick="newGame()">play again</button>
         </div>
 
+        <script src="https://cdn.jsdelivr.net/npm/@jaames/iro@5"></script>
         <script src="timer.js"></script>
         <script src="audio.js"></script>
         <script src="board.js"></script>
+        <script src="color.js"></script>
 	</body>
 </html>

@@ -115,17 +115,27 @@ select { font-family: Gill Sans; }
     user-select: none;
 }
 
-#kitty {
-    opacity: 1;
-    position: absolute;
-    height: 110vh;
-    width: 56vw;
-    left: -4vw;
-    bottom: -9.5vh;
+#kitten {
+    opacity: 0.9;
     transform: rotate(12deg);
-    background-image: linear-gradient(to top, rgba(255, 192, 203, 0.45), transparent), url("media/hane.png");
-    /* background-image: url("media/hane.png"); */
-    background-size: 105%;
+    position: absolute;
+    bottom: -30px;
+    height: 900px;
+    left: -80px;
+
+
+}
+
+#kitty {
+    opacity: 0.9;
+    position: absolute;
+    bottom: 0px;
+    height: 700px;
+    width: 600px;
+    transform: rotate(12deg);
+    /* background-image: linear-gradient(to top, rgba(255, 192, 203, 0.45), transparent), url("media/hane.png"); */
+    background-image: url("media/hane.png");
+    background-size: 200%;
     background-repeat: no-repeat;
 }
 
@@ -175,3 +185,31 @@ select { font-family: Gill Sans; }
     color: crimson;
 }
 
+#bg-colorer {
+    position: absolute;
+    left: 30px;
+    bottom: 30px;
+}
+
+#bg-color-toggle {
+    position: absolute;
+    left: 50px;
+    top: 50px;
+    font-size: 15px;
+
+    color: rgb(248, 248, 204);
+    background-color: rgb(128, 84, 158);
+    
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    box-shadow: none;
+    user-select: none;
+    
+}
+
+@media only screen and (max-width: 800px) {
+    #player, #kitten {
+      opacity: 0;
+    }
+}

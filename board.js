@@ -133,12 +133,19 @@ const colorBoard = () => {
         let cells = rows[i].getElementsByTagName("td");
         for (let j = 0; j < boardSize; ++j) {
             if (boardArray[i][j] != 0 && boardArray[i][j] == ansArray[i][j]) {
-                cells[j].style.backgroundColor = "#f55b7f";
+                cells[j].style.backgroundColor = "#ff5e91";
+                cells[j].style.opacity = "1";
+                // cells[j].style.color = "#baf2b3";
             }
             else if (boardArray[i][j] == 0) {
-                cells[j].style.backgroundColor = "pink"; //#fce6ea
+                cells[j].style.backgroundColor = "white"; 
+                cells[j].style.opacity = "0.5";
             }
-            else { cells[j].style.backgroundColor = "#66555f"; }
+            else { 
+                cells[j].style.backgroundColor = "#1a050d"; 
+                cells[j].style.opacity = "0.85";
+                // cells[j].style.color = "#fa78ac";
+            }
     
         }
     }
@@ -254,7 +261,7 @@ const solvable = puzzle => {
 
 
 let hiddenKitty = false;
-let kitty = document.getElementById("kitty");
+let kitty = document.getElementById("kitten");
 const hideButton = document.getElementById("hideGirls");
 const playAgain = document.getElementById("playAgain");
 const hideAgain = () => {
@@ -268,6 +275,7 @@ const hideGirls = () => {
         hiddenKitty = false;
     }
     else {
+        bgColorer.style.display = "none";
         kitty.style.display = "none";
         player.style.display = "none";
         hideButton.innerText = "unhide";

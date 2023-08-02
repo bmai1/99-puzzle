@@ -55,21 +55,21 @@ let track_list = [
     artist: "lisa ono",
     image: "media/lisa.png",
     path: "media/bg3.mp3",
-    bgColor: "rgb(28, 27, 27, 0.9)"
+    bgColor: "rgb(28, 27, 27, 0.5)"
   },
   {
     name: "don't go breaking my heart",
     artist: "roger nichols & the small circle of friends",
     image: "media/breaking.png",
     path: "media/bg4.mp3",
-    bgColor: "rgb(196, 64, 2, 0.8)"
+    bgColor: "rgb(196, 64, 2, 0.5)"
   },
   {
     name: "misty mauve (1991 remix)",
     artist: "masayuki suzuki",
     image: "media/martini.png",
     path: "media/bg5.mp3",
-    bgColor: "rgb(27, 22, 51, 0.9)"
+    bgColor: "rgb(27, 22, 51, 0.5)"
   },
   {
     name: "two cents party",
@@ -83,21 +83,21 @@ let track_list = [
     artist: "800 cherries",
     image: "media/cherry.png",
     path: "media/bg7.mp3",
-    bgColor: "rgb(58, 189, 78, 0.7)"
+    bgColor: "rgb(58, 189, 78, 0.5)"
   },
   {
     name: "maiden's longing",
     artist: "yu-peng chen",
     image: "media/maidens.png",
     path: "media/bg8.mp3",
-    bgColor: "rgb(86, 155, 176, 0.7)"
+    bgColor: "rgb(86, 155, 176, 0.5)"
   },
   {
     name: "shangri-la",
     artist: "denki groove",
     image: "media/shangri.jpg",
     path: "media/bg9.mp3",
-    bgColor: "rgb(252, 219, 3, 0.6)"
+    bgColor: "rgb(150, 5, 61, 0.5)"
   }
 ];
 

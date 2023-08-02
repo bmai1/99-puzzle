@@ -48,14 +48,14 @@ let track_list = [
     artist: "shibayan records",
     image: "media/cdgir.png",
     path: "media/bg2.mp3",
-    bgColor: "rgb(36, 34, 102, 0.5)"
+    bgColor: "rgb(80, 70, 183, 0.4)"
   },
   {
     name: "garota de ipanema",
     artist: "lisa ono",
     image: "media/lisa.png",
     path: "media/bg3.mp3",
-    bgColor: "rgb(28, 27, 27, 0.5)"
+    bgColor: "rgb(3, 1, 2, 0.89)"
   },
   {
     name: "don't go breaking my heart",
@@ -69,7 +69,7 @@ let track_list = [
     artist: "masayuki suzuki",
     image: "media/martini.png",
     path: "media/bg5.mp3",
-    bgColor: "rgb(27, 22, 51, 0.5)"
+    bgColor: "rgb(3, 5, 150, 0.5)"
   },
   {
     name: "two cents party",
@@ -83,7 +83,7 @@ let track_list = [
     artist: "800 cherries",
     image: "media/cherry.png",
     path: "media/bg7.mp3",
-    bgColor: "rgb(58, 189, 78, 0.5)"
+    bgColor: "rgb(0, 135, 25, 0.6)"
   },
   {
     name: "maiden's longing",
@@ -97,7 +97,7 @@ let track_list = [
     artist: "denki groove",
     image: "media/shangri.jpg",
     path: "media/bg9.mp3",
-    bgColor: "rgb(150, 5, 61, 0.5)"
+    bgColor: "rgb(199, 6, 80, 0.6)"
   }
 ];
 
@@ -243,6 +243,6 @@ const muteSfx = () => {
     mutedSfx = false;
     sfxB.innerHTML = 'mute sfx';
     sfxB.style.color = "#10301a";
-    sfxB.style.backgroundColor = "#c7e1cb";
+    sfxB.style.backgroundColor = "rgb(176, 255, 188, 0.9)";
   }
 }

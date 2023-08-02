@@ -133,18 +133,19 @@ const colorBoard = () => {
         let cells = rows[i].getElementsByTagName("td");
         for (let j = 0; j < boardSize; ++j) {
             if (boardArray[i][j] != 0 && boardArray[i][j] == ansArray[i][j]) {
+                // correct
                 cells[j].style.backgroundColor = "#ff5e91";
                 cells[j].style.opacity = "1";
-                // cells[j].style.color = "#baf2b3";
             }
             else if (boardArray[i][j] == 0) {
+                // empty
                 cells[j].style.backgroundColor = "white"; 
                 cells[j].style.opacity = "0.5";
             }
             else { 
-                cells[j].style.backgroundColor = "#1a050d"; 
-                cells[j].style.opacity = "0.85";
-                // cells[j].style.color = "#fa78ac";
+                // incorrect
+                cells[j].style.backgroundColor = "#140f14"; 
+                cells[j].style.opacity = "0.80";
             }
     
         }

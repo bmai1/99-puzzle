@@ -5,7 +5,8 @@
         <link rel="stylesheet" href="body.css">
         <link rel="stylesheet" href="board.css">
         <link rel="stylesheet" href="audioPlayer.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="shortcut icon" href="https://cdn.onlinewebfonts.com/svg/img_99055.png">
         <title>99 Puzzle</title>
     </head>
@@ -46,25 +47,11 @@
                 <i class="fa fa-volume-down"></i>
                 <input type="range" min="1" max="100"
                   value="99" class="volume_slider" onchange="setVolume()">
-                <i class="fa fa-volume-up"></i>
             </div>
         
         </div>
 
         <!-- control buttons -->
-
-	    <button id="muteSfx" onclick="muteSfx()">mute sfx</button>
-        <select id="sfxSelector" onchange="sfxSelect(this.value)">
-            <option value="media/s1.mp3">wood</option>
-            <option value="media/s2.mp3">marble</option>
-            <option value="media/s3.mp3">bubble</option>
-        </select> 
-
-        <button id="bg-color-toggle" onclick="showColorer()">bg color</button>
-        <div style="display: none" id="bg-colorer">
-            <div id="color-indicator"></div>
-            <div id="color-picker"></div>
-        </div>
 
         <div id="navbar">
             <div>
@@ -81,9 +68,30 @@
 
             <button id="pauseButton" onclick="pauseHandler()">pause</button>
             <button id="hideGirls" onclick="hideGirls()">hide</button>
-
         </div>
 
+        <div id="footbar">
+            <button id="muteSfx" onclick="muteSfx()">mute sfx</button>
+            <select id="sfxSelector" onchange="sfxSelect(this.value)">
+                <option value="media/s1.mp3">wood</option>
+                <option value="media/s2.mp3">marble</option>
+                <option value="media/s3.mp3">bubble</option>
+            </select> 
+            <button id="bg-color-toggle" onclick="showColorer()">bg color</button>
+            <a href="https://github.com/bmai1/99-puzzle">
+                <i id="ghub" class="fa fa-github"></i>
+            </a>
+            <a href="https://www.reddit.com/user/proxarius1">
+                <i id="reddit" class="fa fa-reddit"></i>
+            </a>
+            <a href="https://open.spotify.com/user/c0h7imq640xqinp2w55r08xhc">
+                <i id="spotify" class="fa fa-spotify"></i>
+            </a>
+        </div>
+        <div style="display: none" id="bg-colorer">
+            <div id="color-indicator"></div>
+            <div id="color-picker"></div>
+        </div>
         <!-- endof controls -->
 
         <table id="board16">

@@ -66,32 +66,6 @@ select { font-family: Gill Sans; }
     user-select: none;
 }
 
-#muteSfx{
-    position: absolute;
-    right: 195px;
-    top: 50px;
-    font-size: 15px;
-
-    color: rgb(16, 48, 26);
-    background-color: rgb(199, 225, 203);
-    
-    border: none;
-    border-radius: 10px;
-    outline: none;
-    box-shadow: none;
-    user-select: none;
-}
-
-#sfxSelector {
-    position: absolute;
-    right: 125px;
-    top: 50px;
-
-    outline: none;
-    box-shadow: none;
-    user-select: none;
-}
-
 #modeSelector {
     position: absolute;
     right: 40px;
@@ -116,14 +90,12 @@ select { font-family: Gill Sans; }
 }
 
 #kitten {
-    opacity: 0.9;
+    opacity: 0.85;
     transform: rotate(12deg);
     position: absolute;
-    bottom: -30px;
-    height: 900px;
-    left: -80px;
-
-
+    bottom: -100px;
+    height: 850px;
+    left: -60px;
 }
 
 #kitty {
@@ -185,20 +157,57 @@ select { font-family: Gill Sans; }
     color: crimson;
 }
 
+
+#footbar {
+    background-color: rgba(80, 70, 183, 0.4);
+    opacity: 0.9;
+    border-radius: 20px;
+    height: 40px;
+    width: 30vw;
+    padding: 10px;
+    position: relative;
+    top: 550px;
+    left: 49.4%;
+    transform: translate(-50%, -50%);
+}
+#ghub {
+    color: black;
+    opacity: 0.7;
+    position: absolute;
+    right: 180px;
+    top: 15px;
+    font-size: 30px;
+}
+#spotify {
+    color: black;
+    opacity: 0.7;
+    position: absolute;
+    top: 15px;
+    font-size: 29px;
+}
+#reddit {
+    color: black;
+    opacity: 0.7;
+    position: absolute;
+    left: 165px;
+    top: 17px;
+    font-size: 25px;
+}
+
 #bg-colorer {
     position: absolute;
-    left: 30px;
-    bottom: 30px;
+    left: 300px;
+    bottom: 10px;
 }
 
 #bg-color-toggle {
-    position: absolute;
-    left: 50px;
-    top: 50px;
+    position: relative;
     font-size: 15px;
+    top: 8px;
+    left: -130px;
 
-    color: rgb(248, 248, 204);
-    background-color: rgb(128, 84, 158);
+    color: rgb(62, 29, 140);
+    background-color: rgb(179, 238, 249);
     
     border: none;
     border-radius: 10px;
@@ -206,6 +215,33 @@ select { font-family: Gill Sans; }
     box-shadow: none;
     user-select: none;
     
+}
+#muteSfx{
+    position: relative;
+    font-size: 15px;
+    top: 8px;
+    left: 300px;
+    
+
+    color: rgb(16, 48, 26);
+    background-color: rgb(176, 255, 188, 0.9);
+    
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    box-shadow: none;
+    user-select: none;
+}
+
+#sfxSelector {
+    position: relative;
+    top: 8px;
+    left: 300px;
+
+
+    outline: none;
+    box-shadow: none;
+    user-select: none;
 }
 
 @media only screen and (max-width: 800px) {

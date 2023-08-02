@@ -15,7 +15,7 @@ board and reset the timer.
 
 ## Preview Images:
 
-![demo](/preview/demo.png)
+![demo](/preview/browserview.png)
 
 ![demo 4x4 board](/preview/demo4x4.png)
 
@@ -31,4 +31,4 @@ board and reset the timer.
 
 https://github.com/bmai1/99puzzle/assets/104703637/7badc2f4-0858-4f1c-83d0-9324d4d74cf5
 
-Credit to [Shubham Singh](https://github.com/imshubhamsingh/15-puzzle/commit/e016ad30a9560d2450618a99e9e5b218123f50ae#diff-8478a7bac0240dc851826c916a23b44e3e318bf3e480424aea77d533e1d770fe), parity function ensures puzzle solvability.
+Credit to [Shubham Singh](https://github.com/imshubhamsingh/15-puzzle/commit/e016ad30a9560d2450618a99e9e5b218123f50ae#diff-8478a7bac0240dc851826c916a23b44e3e318bf3e480424aea77d533e1d770fe) for puzzle solvability function.

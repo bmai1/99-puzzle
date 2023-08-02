@@ -112,3 +112,7 @@ i.fa-step-forward,
 i.fa-step-backward {
     cursor: pointer;
 }
+
+.now-playing {
+    font-size: 20px;
+}

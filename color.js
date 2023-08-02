@@ -15,3 +15,7 @@ const showColorer = () => {
         bgColorer.style.display = "block";
     }  
 }
+
+bgColorer.onmouseleave = () => {
+    bgColorer.style.display = "none";
+};

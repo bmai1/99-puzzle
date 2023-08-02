@@ -174,7 +174,7 @@ select { font-family: Gill Sans; }
     color: black;
     opacity: 0.7;
     position: absolute;
-    right: 180px;
+    right: 190px;
     top: 15px;
     font-size: 30px;
 }
@@ -182,6 +182,7 @@ select { font-family: Gill Sans; }
     color: black;
     opacity: 0.7;
     position: absolute;
+    right: 231px;
     top: 15px;
     font-size: 29px;
 }
@@ -189,7 +190,7 @@ select { font-family: Gill Sans; }
     color: black;
     opacity: 0.7;
     position: absolute;
-    left: 165px;
+    left: 155px;
     top: 17px;
     font-size: 25px;
 }
@@ -204,7 +205,7 @@ select { font-family: Gill Sans; }
     position: relative;
     font-size: 15px;
     top: 8px;
-    left: -130px;
+    left: -50px;
 
     color: rgb(62, 29, 140);
     background-color: rgb(179, 238, 249);
@@ -217,10 +218,10 @@ select { font-family: Gill Sans; }
     
 }
 #muteSfx{
-    position: relative;
+    position: absolute;
     font-size: 15px;
-    top: 8px;
-    left: 300px;
+    top: 18.5px;
+    right: 90px;
     
 
     color: rgb(16, 48, 26);
@@ -236,7 +237,7 @@ select { font-family: Gill Sans; }
 #sfxSelector {
     position: relative;
     top: 8px;
-    left: 300px;
+    left: 360px;
 
 
     outline: none;

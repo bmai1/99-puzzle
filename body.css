@@ -90,7 +90,7 @@ select { font-family: Gill Sans; }
 }
 
 #kitten {
-    opacity: 0.85;
+    opacity: 1;
     transform: rotate(12deg);
     position: absolute;
     bottom: -100px;

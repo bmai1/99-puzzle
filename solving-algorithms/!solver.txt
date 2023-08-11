@@ -1,0 +1,14 @@
+Explores states using a custom PriorityQueue and SolverState class.
+
+Methods of SolverState:
+.locate() -> returns index of empty cell (0) within grid, returns [i, j]
+.isSolved() -> compares grid curState to answerState, returns bool
+.validMoves() -> returns valid moves in curState, returns char arr (udlr)
+.applyMove() -> returns copy of grid after swapping empty cell corresponding to move parameter
+
+a-solve.js is an implementation of A* search with a Manhattan distance heuristic.
+It is more optimized than b-solve.js, but caps out at around ~14 moves before
+the browsers locks up. 
+
+b-solve.js is a more traditional BFS and very quickly turns inefficient. 
+Caps out at around 6 moves. 

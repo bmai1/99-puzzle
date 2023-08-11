@@ -1,6 +1,6 @@
 # 99-Puzzle
 This project is a parody of the 15-puzzle with more features such as larger boards, an APM tracker, best time with localStorage, and audio.
-It is better optimized for speedrunning as there are no tile animations, which allows for frame-lossless rotations.
+It is better optimized for speedrunning as there are no tile animations, which allows for frame-lossless rotations. Solving algorithms (A*, BFS) are included, but checking board states past 10 moves crashes the browser as it is too slow.
 
 
 ## Objective: 

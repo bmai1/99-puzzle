@@ -6,9 +6,11 @@ Methods of SolverState:
 .validMoves() -> returns valid moves in curState, returns char arr (udlr)
 .applyMove() -> returns copy of grid after swapping empty cell corresponding to move parameter
 
+
+Two solving algorithsm; both yield the optimal solution (least amount of moves) but are very slow.
+
 a-solve.js is an implementation of A* search with a Manhattan distance heuristic.
 It is more optimized than b-solve.js, but caps out at around ~14 moves before
 the browsers locks up. 
 
-b-solve.js is a more traditional BFS and very quickly turns inefficient. 
-Caps out at around 6 moves. 
+b-solve.js is a more traditional BFS and caps out at around 6 moves. 

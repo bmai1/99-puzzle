@@ -141,10 +141,17 @@ const playpauseTrack = () => {
   else pauseTrack();
 }
  
+function checkMobile() {
+  const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+  return isMobile;
+}
+
 const playTrack = () => {
   if (firstInteraction) { return; }
   // Play the loaded track
-  curr_track.play();
+  if (!checkMobile()) {
+    curr_track.play();
+  }
   isPlaying = true;
  
   // Replace icon with the pause icon

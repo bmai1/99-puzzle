@@ -257,8 +257,84 @@ button:hover {
     user-select: none;
 }
 
-@media only screen and (max-width: 800px) {
-    #player, #kitten {
-      opacity: 0;
+@media only screen and (max-width: 1000px) {
+    #player, #kitten, #hideGirls, #footbar, #modeSelector {
+      display: none !important;
+    }
+    #newGame {
+        padding: 10px;
+        font-size: 50px;
+        right: 15px;
+    }
+    #pauseButton {
+        padding: 10px;
+        font-size: 50px;
+        right: 250px;
+    }
+    #timer {
+        top: 17px;
+        font-size: 50px;
+    }
+    #moveCount {
+        left: 25px;
+        top: 100px;
+        font-size: 35px;
+    }
+    #navbar {
+        border: 2px solid rgb(121, 8, 106);
+        width: 80vw !important;
+        height: 10vh !important;
+        top: 200px;
+        font-size: 50px !important;
+    }
+    
+
+    #keys, #mobile-controls, #keytip  {
+        display: block !important; 
+    }
+    
+    #mobile-controls {
+        position: absolute;
+        bottom: 0px;
+        left: 50%;
+        transform: translate(-50%);
+    }
+    #keytip1, #keytip2, #keytip3, #keytip4 {
+        border: 2px solid rgb(121, 8, 106);
+        position: absolute;
+        display: flex !important;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(254, 130, 167);
+        width: 150px;
+        height: 150px;
+        border-radius: 10px;
+        color: rgb(116, 7, 89);
+    }
+    #keytip1 {
+        bottom: 20px;
+        left: -50px;
+    }
+    #keytip2 {
+        bottom: 20px;
+        left: 120px;
+    }
+    #keytip3 {
+        bottom: 20px;
+        left: -220px;
+
+    }
+    #keytip4 {
+        bottom: 190px;
+        left: -50px;
+    }
+    .arrow {
+        font-size: 50px !important;
+        right: 50px;
     }
 }
+
+#keys, #mobile-controls, #keytip {
+    display: none;
+}
+

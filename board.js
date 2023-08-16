@@ -321,3 +321,43 @@ const check = () => {
     // other flags are reset in newGame();
 }
 
+
+// mobile keypad
+
+const dkey = document.getElementById("keytip1");
+const rkey = document.getElementById("keytip2");
+const lkey = document.getElementById("keytip3");
+const ukey = document.getElementById("keytip4");
+
+ukey.addEventListener("click", () => { mobileMove("up"); });
+
+dkey.addEventListener("click", () => { mobileMove("down"); });
+
+lkey.addEventListener("click", () => { mobileMove("left"); });
+
+rkey.addEventListener("click", () => { mobileMove("right"); });
+
+function mobileMove(direction) {
+
+    if (lockMoves) { return; }
+
+    if ((direction == "up") && empty[0] != boardSize - 1) { editBoard("up"); }
+    else if ((direction == "down") && empty[0] != 0) { editBoard("down"); }
+    else if ((direction == "left") && empty[1] != boardSize - 1) { editBoard("left"); }
+    else if ((direction == "right") && empty[1] != 0) { editBoard("right"); }
+    else return; 
+
+    if (timerFlag) {
+        startTimer();
+        startTrackingAPM();
+        timerFlag = false; 
+        pauseEnabled = true;
+    }
+    
+    moveCount++; 
+    moveCounter.innerText = "Moves: " + moveCount;
+    renderBoard();
+    colorBoard();
+    check();
+
+}

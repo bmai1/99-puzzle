@@ -53,3 +53,22 @@ table {
 #currCell {
     transition: transform 0.2s ease-in-out;
 }
+
+@media only screen and (max-width: 1000px) {
+    table {
+        display: flex !important;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+    }
+    td {
+        border-radius: 30px !important;
+        height: 200px !important;
+        width: 200px !important;
+        font-size: 50px !important;
+    }
+
+    #board100, #board25 {
+        display: none !important;
+    }
+}

@@ -57,7 +57,7 @@ let track_list = [
     artist: "lisa ono",
     image: "media/lisa.png",
     path: "media/bg3.mp3",
-    bgColor: "rgb(3, 1, 2, 0.89)",
+    bgColor: "rgb(3, 1, 2, 0.6)",
     bodyColor: "#707070"
   },
   {

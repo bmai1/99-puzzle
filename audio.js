@@ -41,63 +41,72 @@ let track_list = [
     artist: "物語シリーズ",
     image: "media/shinsetsu.png",
     path: "media/bg1.mp3",
-    bgColor: "rgb(240, 98, 121, 0.45)"
+    bgColor: "rgb(240, 98, 121, 0.45)",
+    bodyColor: "pink"
   },
   {
     name: "campo de girassol",
     artist: "shibayan records",
     image: "media/cdgir.png",
     path: "media/bg2.mp3",
-    bgColor: "rgb(80, 70, 183, 0.4)"
+    bgColor: "rgb(80, 70, 183, 0.4)",
+    bodyColor: "#e1deff"
   },
   {
     name: "garota de ipanema",
     artist: "lisa ono",
     image: "media/lisa.png",
     path: "media/bg3.mp3",
-    bgColor: "rgb(3, 1, 2, 0.89)"
+    bgColor: "rgb(3, 1, 2, 0.89)",
+    bodyColor: "#707070"
   },
   {
     name: "don't go breaking my heart",
     artist: "roger nichols & the small circle of friends",
     image: "media/breaking.png",
     path: "media/bg4.mp3",
-    bgColor: "rgb(196, 64, 2, 0.5)"
+    bgColor: "rgb(196, 64, 2, 0.5)",
+    bodyColor: "#ffdec7"
   },
   {
     name: "misty mauve (1991 remix)",
     artist: "masayuki suzuki",
     image: "media/martini.png",
     path: "media/bg5.mp3",
-    bgColor: "rgb(3, 5, 150, 0.5)"
+    bgColor: "rgb(3, 5, 150, 0.5)",
+    bodyColor: "#c3a9f5"
   },
   {
     name: "two cents party",
     artist: "erikson jayanto",
     image: "media/twocent.png",
     path: "media/bg6.mp3",
-    bgColor: "rgb(97, 97, 97, 0.6)"
+    bgColor: "rgb(97, 97, 97, 0.6)",
+    bodyColor: "#c7c7c7"
   },
   {
     name: "romantico",
     artist: "800 cherries",
     image: "media/cherry.png",
     path: "media/bg7.mp3",
-    bgColor: "rgb(0, 135, 25, 0.6)"
+    bgColor: "rgb(0, 135, 25, 0.6)",
+    bodyColor: "#e3ffe3"
   },
   {
     name: "maiden's longing",
     artist: "yu-peng chen",
     image: "media/maidens.png",
     path: "media/bg8.mp3",
-    bgColor: "rgb(86, 155, 176, 0.5)"
+    bgColor: "rgb(86, 155, 176, 0.5)",
+    bodyColor: "#d9f3ff"
   },
   {
     name: "shangri-la",
     artist: "denki groove",
     image: "media/shangri.jpg",
     path: "media/bg9.mp3",
-    bgColor: "rgb(199, 6, 80, 0.6)"
+    bgColor: "rgb(199, 6, 80, 0.6)",
+    bodyColor: "#fca7ae"
   }
 ];
 
@@ -118,6 +127,8 @@ const loadTrack = (track_index) => {
   track_name.textContent = track_list[track_index].name;
   track_artist.textContent = track_list[track_index].artist;
   player.style.backgroundColor = track_list[track_index].bgColor;
+
+  document.body.style.backgroundColor = track_list[track_index].bodyColor;
  
   // Set an interval of 1000 milliseconds
   // for updating the seek slider

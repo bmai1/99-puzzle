@@ -1,4 +1,8 @@
 # 99-Puzzle
+GitHub Pages:  https://bmai1.github.io/99-puzzle/
+<br>
+Netlify deployment: https://99puzzle.netlify.app/
+
 This project is a spin-off of the 15-puzzle with additional features such as larger boards, an APM tracker, local best time, and audio.
 It is better optimized for speedrunning as there are no tile animations, which allows for frame-lossless rotations. Solving algorithms (A*, BFS) are included, but checking board states past 10 moves crashes the browser as it is too slow.
 
